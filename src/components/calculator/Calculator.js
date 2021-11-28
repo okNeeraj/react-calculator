@@ -2,9 +2,9 @@ import {useState, useEffect} from "react";
 import './Calculator.css';
 
 function Calculator() {
-  useEffect(() => {
-    document.title = `Your result is ${result}`;
-  });
+  // useEffect(() => {
+  //   document.title = `Your result is ${result || 0}`;
+  // });
 
   const [result, setResult] = useState(0);
   const [calc, setCalc] = useState('');
@@ -148,7 +148,7 @@ function Calculator() {
           </div>
         </div>
       </div>
-      <h3 className="">Simple React Calculator <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/okneerajsingh/" className="text-blue-600">Neeraj</a></h3>
+      <h3 className="">Simple React Calculator <a target="_blank" rel="noreferrer" href="https://github.com/okNeeraj" className="text-blue-600">Neeraj</a></h3>
     </div>
   );
 }
