@@ -1,0 +1,9 @@
+.calc-btn:active {
+    opacity: 0.6;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
