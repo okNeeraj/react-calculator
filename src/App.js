@@ -1,7 +1,7 @@
 import Calculator from "./components/calculator/Calculator";
+// import Navbar from "./components/Navbar";
 // import Card from "./components/Card";
 // import Footer from "./components/Footer";
-// import Navbar from "./components/Navbar";
 
 function App() {
   return (

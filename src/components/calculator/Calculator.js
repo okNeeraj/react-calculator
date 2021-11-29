@@ -2,23 +2,28 @@ import {useState} from "react";
 import './Calculator.css';
 
 function Calculator() {
-  // useEffect(() => {
-  //   document.title = `Your result is ${result || 0}`;
-  // });
-
   const [result, setResult] = useState(0);
   const [calc, setCalc] = useState('');
   const ops = ['+', '-', '*', '/', '.'];
+  const opsZero = ['+0', '-0', '*0', '/0', '.0'];
+  const digit = ['0', '1', '2', '3', '4,', '5', '6', '7', '8', '9'];
 
   const updateCalc = value => {
-    // alert(`Value is ${value} and cals is ${calc.toString()}`);
-    console.log(calc);
-
     if (
       ops.includes(value) &&
       (calc.toString() === '' || ops.includes(calc.toString().slice(-1)))
     ) {
       return ;
+    }
+
+    if(calc.toString() === '0' && digit.includes(value)) {
+      setCalc(value);
+      return;
+    }
+
+    if(opsZero.includes(calc.toString().slice(-2))){
+      setCalc(calc.toString().slice(0, -1) + value);
+      return;
     }
     setCalc(calc + value);
 
@@ -34,7 +39,6 @@ function Calculator() {
   }
 
   const calculate = () => {
-    // alert(calc);
     if(calc.toString() !== '' && !ops.includes(calc.toString().slice(-1))) {
       // eslint-disable-next-line no-eval
       setResult(eval(calc).toString());
