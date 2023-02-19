@@ -1,8 +1,8 @@
 # Calculator in React JS
 
 
-URL : [https://okneeraj-react-calculator.netlify.app](Checkout here)
+URL : [https://okneeraj-react-calculator.netlify.app]
 
-Author/Developer : [https://www.linkedin.com/in/okneerajsingh/](Neeraj Singh)
+Author/Developer : [https://www.linkedin.com/in/okneerajsingh/]
 
 
